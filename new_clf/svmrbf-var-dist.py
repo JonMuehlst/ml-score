@@ -112,7 +112,7 @@ class svmrbf-var-dist(BaseEstimator,ClassifierMixin):
 
         # distance_function = get_distance_funcs()[self.distance]
         dists_mat = pairwise_distances(X=A, Y=B, metric=self.distance, n_jobs=-1)
-        return np.exp(-self._gamma * dists_mat)
+        return np.exp(-self.gamma * dists_mat)
 
 
     """ """
